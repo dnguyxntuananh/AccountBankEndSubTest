@@ -3,15 +3,18 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Localization;
 using System.Diagnostics;
 using System.Globalization;
+using AccountBank.Services;
+using AccountBank.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSession();
 builder.Services.AddControllersWithViews();
 // dùng để kết nối với database
 var connectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
-//builder.Services.AddDbContext<DatabaseContext>(option => option.UseLazyLoadingProxies().UseSqlServer(connectionString));
+builder.Services.AddDbContext<DatabaseContext>(option => option.UseLazyLoadingProxies().UseSqlServer(connectionString));
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<AccountService, AccountServiceImp>();
 
 var app = builder.Build();
 app.UseSession();

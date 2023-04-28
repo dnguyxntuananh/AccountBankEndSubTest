@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8AB0KwtuG+eXZqq517v36AnV+7tfrdAZ9IoF6mmemJm2Y5uIxbp5MfW/7lCDl0Ch/Ri0ED1klJiwz2UAl/06Xw==",
+  "dgSpecHash": "89fNUoc5cgKQ7N9X2O2j+tOr9sI0OWTFjDURcjdyEJxwLxxLBYBLvxAkyT6vA8vsexOllMv1TPvgRg8/ONO6FA==",
   "success": true,
   "projectFilePath": "G:\\Github Docs\\Respon\\ASP.NET\\AccountBankEndSubTest\\AccountBank_MVC\\AccountBank\\AccountBank.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acer\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\acer\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

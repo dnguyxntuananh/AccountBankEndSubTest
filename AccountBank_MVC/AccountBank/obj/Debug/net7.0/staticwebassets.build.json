@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "QUlfIZZhxidG9zlRDzBmpTFI85qrj0JspwSF+KJoVfk=",
+  "Hash": "6aAlakIVllWMkB0F7b7fPIWc7PnZOEPKfkli7R0N1UY=",
   "Source": "AccountBank",
   "BasePath": "_content/AccountBank",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "AccountBank\\wwwroot",
+      "Source": "AccountBank",
+      "ContentRoot": "G:\\Github Docs\\Respon\\ASP.NET\\AccountBankEndSubTest\\AccountBank_MVC\\AccountBank\\wwwroot\\",
+      "BasePath": "_content/AccountBank",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
