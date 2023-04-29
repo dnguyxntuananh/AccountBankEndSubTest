@@ -3,7 +3,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<h1>Login Page</h1>
+<h1>Login</h1>
 <form asp-action="login" asp-controller="account" method="post">
     <div class="mb-3 mt-3">
         <label for="username" class="form-label">Username:</label>
@@ -14,6 +14,8 @@
         <input type="password" class="form-control" id="Password" placeholder="Enter password" name="Password" width="800">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
-
  </form>
+ <a asp-action="index" asp-controller="account" class="btn btn-secondary">Back</a>
+<a class="btn btn-outline-warning" asp-action="register" asp-controller="account">Register</a>
+
 

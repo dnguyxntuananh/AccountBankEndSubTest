@@ -39,6 +39,7 @@ public class AccountController : Controller
         if (ModelState.IsValid)
         {
             account.Password = BCrypt.Net.BCrypt.HashPassword(account.Password);
+            account.Status = true;
             if (_accountService.Create(account))
             {
 
@@ -61,10 +62,37 @@ public class AccountController : Controller
 
 
 
-
+    [HttpGet]
     [Route("login")]
     public IActionResult Login()
     {
         return View("Login");
+    }
+
+    [HttpPost]
+    [Route("login")]
+    public IActionResult login(string username, string password, Account account)
+    {
+
+        if (_accountService.Login(username, password))
+        {
+
+            HttpContext.Session.SetString("username", username);
+            return RedirectToAction("welcome");
+        }
+        else
+        {
+            //ViewBag.msg = "Invalid";
+            TempData["msg"] = "Invalid";
+            return RedirectToAction("Index");
+        }
+
+    }
+
+    [Route("welcome")]
+    public IActionResult welcome()
+    {
+        ViewBag.username = HttpContext.Session.GetString("username");
+        return View("welcome");
     }
 }

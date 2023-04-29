@@ -30,6 +30,18 @@ public class AccountServiceImp : AccountService
 
     public bool Login(string username, string password)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var account = db.Accounts.SingleOrDefault(acc => acc.Username == username && acc.Status == true);
+            if (account != null)
+            {
+                return BCrypt.Net.BCrypt.Verify(password, account.Password);
+            }
+            return false;
+        }
+        catch
+        {
+            return false;
+        }
     }
 }
